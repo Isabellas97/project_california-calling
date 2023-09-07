@@ -355,7 +355,7 @@ header .bearButton {
     transform: rotate(360deg); /* Endposition: vollständige Drehung (360 Grad) */
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 769px) {
   .buttonStyle {
     font-size: 20px;
     font-family: Work;
@@ -534,6 +534,71 @@ header .bearButton {
     margin-top: -30%;
     margin-bottom: 5vh;
     padding: 0;
+  }
+  footer {
+    background-image: none;
+  }
+  footer article {
+    width: 70vw;
+    margin-top: 15vh;
+  }
+  footer article h4 {
+    line-height: 2rem;
+  }
+  footer h1 {
+    margin-top: 10vh;
+    font-size: 8rem;
+    color: white;
+  }
+  footer h1 span {
+    color: black;
+    -webkit-text-stroke: 1px white;
+  }
+  footer .footerFlex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+  }
+  footer .footerFlex .socialMedia {
+    width: 50vw;
+    margin-bottom: 10vh;
+  }
+  footer .footerFlex .socialMedia img {
+    width: 10vw;
+    margin: 0 3vw;
+    margin-bottom: 4vh;
+  }
+  footer .footerFlex .socialMedia p {
+    text-align: center;
+  }
+  footer .footerFlex .logos {
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footerFlex .logos img {
+    width: 15vw;
+    margin: 0 5vw;
+  }
+  footer .diagonaleAnimation {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    white-space: nowrap;
+    animation: diagonalMove 5s linear infinite;
+  }
+  @keyframes diagonalMove {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    100% {
+      top: 0;
+      left: 100%;
+    }
   }
 }
 
