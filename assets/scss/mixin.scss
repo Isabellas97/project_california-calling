@@ -1,0 +1,6 @@
+@mixin my-style($fs, $ff, $fw, $lh) {
+  font-size: $fs;
+  font-family: $ff;
+  font-weight: $fw;
+  line-height: $lh;
+}

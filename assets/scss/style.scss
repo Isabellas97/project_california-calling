@@ -1,3 +1,9 @@
+@import "./variable.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+// ----------------------------
+
 @font-face {
   font-family: Inter;
   src: url("../font/Inter-VariableFont_slnt\,wght.ttf");
@@ -11,35 +17,23 @@
 // - Fontsize ---------------------
 
 h1 {
-  font-size: 4.5rem;
-  font-family: Inter;
-  line-height: 3.5rem;
+  @include my-style(4.5rem, Inter, 700, 3.5rem);
 }
 
 h2 {
-  font-size: 100px;
-  font-family: Inter;
+  @include my-style(100px, Inter, 700, 110px);
 }
 
 h3 {
-  font-size: 85px;
-  font-family: Inter;
+  @include my-style(85px, Inter, 700, 5rem);
 }
 
 h4 {
-  font-size: 1.9rem;
-  font-family: Inter;
-}
-
-p {
-  font-size: 12px;
-  font-family: Work;
+  @include my-style(1.9rem, Inter, 700, 2.8rem);
 }
 
 .numbers {
-  font-size: 100px;
-  font-family: Inter;
-  font-weight: 600;
+  @include my-style(100px, Inter, 600, 7rem);
 }
 
 // - General Style -------------------
@@ -55,8 +49,8 @@ body {
 }
 
 .blackBG {
-  background-color: #000000;
-  color: white;
+  background-color: $b;
+  color: $w;
 }
 
 .buttonStyle {
@@ -64,15 +58,17 @@ body {
   font-family: Work;
   width: 8vw;
   padding: 1.5vh 0;
-  border: 0.6px solid white;
-  background-color: #000000;
-  color: #aaaaaa;
+  border: 0.6px solid $w;
+  background-color: $b;
+  color: $ws;
 
   &:hover {
-    color: #000000;
-    background-color: white;
+    color: $b;
+    background-color: $w;
   }
 }
+
+// - Header ----------------
 
 header {
   display: flex;
@@ -83,16 +79,17 @@ header {
   .strich {
     width: 1px;
     height: 20vh;
-    background-color: white;
+    background-color: $w;
     opacity: 20%;
     margin-bottom: 5vh;
   }
   p {
+    @include my-style(12px, Work, 400, 1rem);
     margin-bottom: 2vh;
   }
   .outlineText {
-    color: black;
-    -webkit-text-stroke: 1px white;
+    color: $b;
+    -webkit-text-stroke: 1px $w;
     margin-bottom: 2vh;
   }
 
@@ -106,11 +103,11 @@ header {
   }
 }
 
+// - 1. Section --------------------
+
 .sectionOne {
   h2 {
-    margin-left: 10vw;
-    padding-right: 15vw;
-    margin-bottom: 12vh;
+    margin: 0 15vw 12vh 10vw;
   }
 
   article {
@@ -122,16 +119,17 @@ header {
     div {
       margin-left: 10vw;
       .numbers {
-        margin-bottom: 2vh;
+        margin-bottom: 3vh;
       }
     }
-
     img {
       width: 32vw;
       margin-top: -10vh;
     }
   }
 }
+
+// - 2. Section gestreute Bilderanordnung ----------------
 
 .sectionTwo {
   display: flex;
@@ -175,25 +173,26 @@ header {
 
     h3 {
       margin-bottom: 2vh;
-      line-height: 5rem;
     }
 
     p {
+      @include my-style(13px, Work, 400, 1.6rem);
       padding-right: 8vw;
-      line-height: 1.5rem;
     }
   }
 
   .stuck2 {
     width: 30vw;
-    margin: -27vh auto 15vh 32vw;
+    margin: -24vh auto 15vh 32vw;
 
     p {
-      padding-right: 8vw;
-      line-height: 1.5rem;
+      padding-right: 5vw;
+      @include my-style(13px, Work, 400, 1.5rem);
     }
   }
 }
+
+// - 3. Section  ---------------
 
 .sectionThree {
   div {
@@ -205,7 +204,7 @@ header {
     article {
       &:nth-of-type(1) {
         width: 25vw;
-        line-height: 4.5rem;
+        line-height: 4.4rem;
       }
       &:nth-of-type(2) {
         width: 38vw;
@@ -214,7 +213,7 @@ header {
           margin-bottom: 2vh;
         }
         p {
-          font-size: 1.2rem;
+          @include my-style(1.2rem, Work, 400, 1.6rem);
         }
       }
     }
@@ -238,7 +237,7 @@ header {
 }
 
 .greyBG {
-  background-color: #eeeeee;
+  background-color: $ws;
 
   div {
     display: flex;
@@ -258,7 +257,7 @@ header {
           margin-bottom: 2vh;
         }
         p {
-          font-size: 1.2rem;
+          @include my-style(1.2rem, Work, 400, 1.6rem);
         }
       }
     }
@@ -281,6 +280,8 @@ header {
     }
   }
 }
+
+// - Animation ------------------
 
 .animation {
   overflow: hidden;
@@ -306,82 +307,207 @@ header {
   }
 }
 
-footer {
-  position: relative;
-  background-image: url("../img/Diagonale.png");
-  background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  article {
-    display: flex;
-    flex-direction: column;
-    width: 42vw;
-    padding-top: 15vh;
-    margin: 0 10vw;
-    margin-bottom: 15vh;
-    p {
-      margin-bottom: 3vh;
-    }
-    h4 {
-      line-height: 3.7rem;
-      margin-bottom: 4vh;
-    }
-  }
+// - Media Queies
 
-  .footerFlex {
-    margin: 0 10vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media only screen and (max-width: 576px) {
+  .buttonStyle {
+    font-size: 20px;
+    font-family: Work;
+    width: 30vw;
+    padding: 2vh 4vw;
+    border: 0.6px solid $w;
+    background-color: $b;
+    color: $ws;
 
-    .socialMedia {
-      margin-bottom: 5vh;
-      img {
-        width: 1.5vw;
-        margin: 0 0.2vw;
-        margin-bottom: 1.5vh;
-      }
-    }
-    p {
-      margin-bottom: 1.5vh;
-    }
-  }
-
-  .logos {
-    margin-right: 5vw;
-    img {
-      width: 4vw;
-      margin: 0 1vw;
+    &:hover {
+      color: $b;
+      background-color: $w;
     }
   }
 
   h1 {
-    font-size: 8rem;
-    color: #000000;
-    span {
-      color: rgb(244, 244, 244);
-      -webkit-text-stroke: 1px black;
+    @include my-style(3rem, Inter, 700, 2.2rem);
+  }
+
+  h2 {
+    @include my-style(40px, Inter, 700, 60px);
+  }
+
+  h3 {
+    @include my-style(60px, Inter, 700, 3rem);
+  }
+
+  h4 {
+    @include my-style(1.3rem, Inter, 700, 2.5rem);
+  }
+
+  .numbers {
+    @include my-style(80px, Inter, 600, 7rem);
+  }
+
+  header {
+    width: auto;
+    .bearButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 20vh;
+      margin-bottom: 20vh;
     }
   }
 
-  .diagonaleAnimation {
-    position: absolute;
-    top: 0;
-    left: 50%; /* Startposition: Mitte oben */
-    transform: translateX(-50%) rotate(45deg); /* Text um 45 Grad drehen und zurückschieben */
-    white-space: nowrap; /* Verhindert Zeilenumbrüche */
-    animation: diagonalMove 5s linear infinite; /* Animation mit Namen "diagonalMove" */
+  .sectionOne {
+    article {
+      flex-direction: column;
+      justify-content: center;
+      div {
+        z-index: 2;
+      }
+      img {
+        width: 60vw;
+        margin: -60vh 10vw auto auto;
+        z-index: 1;
+      }
+    }
   }
 
-  @keyframes diagonalMove {
-    0% {
-      top: 0;
-      left: 50%; /* Startposition: Mitte oben */
+  .sectionTwo {
+    width: 100vw;
+    img {
+      &:nth-of-type(1) {
+        width: 50vw;
+        margin: -5vh 10vw 5vh auto;
+      }
+      &:nth-of-type(2) {
+        width: 30vw;
+        margin: 0 5vw 5vh 0;
+      }
+
+      &:nth-of-type(3) {
+        width: 40vw;
+        margin: 5vh 0 0 auto;
+      }
+      &:nth-of-type(4) {
+        width: 40vw;
+        margin: -10vh auto 0 0vw;
+      }
+      &:nth-of-type(5) {
+        width: 40vw;
+        margin: 0vh 10vw 3vh auto;
+      }
+      &:nth-of-type(6) {
+        width: 30vw;
+        margin: -10vh auto 5vh 0;
+      }
+      &:nth-of-type(7) {
+        width: 50vw;
+        margin: -10vh auto -10vw 30vw;
+      }
     }
-    100% {
-      top: 100%; /* Endposition: Text unten */
-      left: 101%; /* Endposition: Text rechts */
+    .stuck {
+      width: 70vw;
+      margin-left: 20vw;
+
+      p {
+        @include my-style(13px, Work, 400, 1.6rem);
+        padding-right: 0vw;
+      }
+    }
+
+    .stuck2 {
+      width: 70vw;
+      margin: 0vh auto 15vh 20vw;
+
+      p {
+        padding-right: 0vw;
+        @include my-style(13px, Work, 400, 1.5rem);
+      }
+    }
+  }
+
+  .sectionThree {
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      padding-top: 20vh;
+      //   margin-left: 0vw;
+      article {
+        &:nth-of-type(1) {
+          width: 50vw;
+          line-height: 4.4rem;
+        }
+        &:nth-of-type(2) {
+          width: 60vw;
+          margin: 8vh 10vw 0 0;
+        }
+      }
+    }
+    .twoImages {
+      img {
+        &:nth-of-type(1) {
+          width: 60vw;
+          z-index: 1;
+          margin-top: 0vh;
+        }
+
+        &:nth-of-type(2) {
+          width: 28vw;
+          z-index: 2;
+          margin: -30vh auto -10vh 50vw;
+        }
+      }
+    }
+  }
+
+  .greyBG {
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      padding-top: 10vh;
+      //   margin-left: 0vw;
+      article {
+        &:nth-of-type(1) {
+          width: 50vw;
+          line-height: 4.4rem;
+        }
+        &:nth-of-type(2) {
+          width: 60vw;
+          margin: 8vh 10vw 0 0;
+        }
+      }
+    }
+    .twoImagesSpiegel {
+      img {
+        &:nth-of-type(1) {
+          width: 30vw;
+          z-index: 2;
+          margin: 10vh auto auto 0vw;
+        }
+        &:nth-of-type(2) {
+          width: 60vw;
+          z-index: 1;
+          margin: -35vh 10vw 5vh auto;
+        }
+      }
+    }
+  }
+
+  // - Animation ------------------
+
+  .animation {
+    overflow: hidden;
+    .circle {
+      width: 100vw;
+      margin-left: 45vw;
+      margin-top: -30%;
+      margin-bottom: 5vh;
+      padding: 0;
     }
   }
 }
