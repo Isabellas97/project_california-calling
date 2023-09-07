@@ -1,0 +1,342 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
+@font-face {
+  font-family: Work;
+  src: url("../font/WorkSans-VariableFont_wght.ttf");
+}
+h1 {
+  font-size: 4.5rem;
+  font-family: Inter;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 100px;
+  font-family: Inter;
+}
+
+h3 {
+  font-size: 85px;
+  font-family: Inter;
+}
+
+h4 {
+  font-size: 1.9rem;
+  font-family: Inter;
+}
+
+p {
+  font-size: 12px;
+  font-family: Work;
+}
+
+.numbers {
+  font-size: 100px;
+  font-family: Inter;
+  font-weight: 600;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+
+.blackBG {
+  background-color: #000000;
+  color: white;
+}
+
+.buttonStyle {
+  font-size: 20px;
+  font-family: Work;
+  width: 8vw;
+  padding: 1.5vh 0;
+  border: 0.6px solid white;
+  background-color: #000000;
+  color: #aaaaaa;
+}
+.buttonStyle:hover {
+  color: #000000;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+header .strich {
+  width: 1px;
+  height: 20vh;
+  background-color: white;
+  opacity: 20%;
+  margin-bottom: 5vh;
+}
+header p {
+  margin-bottom: 2vh;
+}
+header .outlineText {
+  color: black;
+  -webkit-text-stroke: 1px white;
+  margin-bottom: 2vh;
+}
+header .bearButton {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin-top: 40vh;
+  margin-bottom: 25vh;
+}
+
+.sectionOne h2 {
+  margin-left: 10vw;
+  padding-right: 15vw;
+  margin-bottom: 12vh;
+}
+.sectionOne article {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15vh;
+}
+.sectionOne article div {
+  margin-left: 10vw;
+}
+.sectionOne article div .numbers {
+  margin-bottom: 2vh;
+}
+.sectionOne article img {
+  width: 32vw;
+  margin-top: -10vh;
+}
+
+.sectionTwo {
+  display: flex;
+  flex-direction: column;
+}
+.sectionTwo img:nth-of-type(1) {
+  width: 25vw;
+  margin: -10vh 10vw 10vh auto;
+}
+.sectionTwo img:nth-of-type(2) {
+  width: 20vw;
+  margin-left: 5vw;
+}
+.sectionTwo img:nth-of-type(3) {
+  width: 20vw;
+  margin: -5vh 0 0 80vw;
+}
+.sectionTwo img:nth-of-type(4) {
+  width: 25vw;
+  margin: 0 auto 0 20vw;
+}
+.sectionTwo img:nth-of-type(5) {
+  width: 25vw;
+  margin: -3vh 10vw 3vh auto;
+}
+.sectionTwo img:nth-of-type(6) {
+  width: 20vw;
+  margin: 0 auto 5vh 0;
+}
+.sectionTwo img:nth-of-type(7) {
+  width: 30vw;
+  margin: 0 auto -5vw 45vw;
+}
+.sectionTwo .stuck {
+  width: 30vw;
+  margin-left: 32vw;
+}
+.sectionTwo .stuck h3 {
+  margin-bottom: 2vh;
+  line-height: 5rem;
+}
+.sectionTwo .stuck p {
+  padding-right: 8vw;
+  line-height: 1.5rem;
+}
+.sectionTwo .stuck2 {
+  width: 30vw;
+  margin: -27vh auto 15vh 32vw;
+}
+.sectionTwo .stuck2 p {
+  padding-right: 8vw;
+  line-height: 1.5rem;
+}
+
+.sectionThree div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20vh;
+  margin-left: 10vw;
+}
+.sectionThree div article:nth-of-type(1) {
+  width: 25vw;
+  line-height: 4.5rem;
+}
+.sectionThree div article:nth-of-type(2) {
+  width: 38vw;
+  margin: 8vh 10vw auto auto;
+}
+.sectionThree div article:nth-of-type(2) h4 {
+  margin-bottom: 2vh;
+}
+.sectionThree div article:nth-of-type(2) p {
+  font-size: 1.2rem;
+}
+.sectionThree .twoImages {
+  display: flex;
+  flex-direction: column;
+}
+.sectionThree .twoImages img:nth-of-type(1) {
+  width: 50vw;
+  z-index: 1;
+}
+.sectionThree .twoImages img:nth-of-type(2) {
+  width: 28vw;
+  z-index: 2;
+  margin: -75vh 17vw -10vh auto;
+}
+
+.greyBG {
+  background-color: #eeeeee;
+}
+.greyBG div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10vh;
+  margin-left: 10vw;
+}
+.greyBG div article:nth-of-type(1) {
+  width: 25vw;
+  line-height: 4.5rem;
+}
+.greyBG div article:nth-of-type(2) {
+  width: 38vw;
+  margin: 8vh 10vw auto auto;
+}
+.greyBG div article:nth-of-type(2) h4 {
+  margin-bottom: 2vh;
+}
+.greyBG div article:nth-of-type(2) p {
+  font-size: 1.2rem;
+}
+.greyBG .twoImagesSpiegel {
+  display: flex;
+  flex-direction: column;
+}
+.greyBG .twoImagesSpiegel img:nth-of-type(1) {
+  width: 25vw;
+  z-index: 2;
+  margin: 10vh auto auto 10vw;
+}
+.greyBG .twoImagesSpiegel img:nth-of-type(2) {
+  width: 50vw;
+  z-index: 1;
+  margin: -70vh 10vw 5vh auto;
+}
+
+.animation {
+  overflow: hidden;
+}
+.animation .circle {
+  width: 35vw;
+  position: relative;
+  animation: rotate 8s linear infinite; /* Animation mit Namen "rotate" */
+  margin-left: 75%;
+  margin-top: -10%;
+  margin-bottom: 20vh;
+  padding: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Startposition: kein Drehwinkel (0 Grad) */
+  }
+  100% {
+    transform: rotate(360deg); /* Endposition: vollständige Drehung (360 Grad) */
+  }
+}
+footer {
+  position: relative;
+  background-image: url("../img/Diagonale.png");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+footer article {
+  display: flex;
+  flex-direction: column;
+  width: 42vw;
+  padding-top: 15vh;
+  margin: 0 10vw;
+  margin-bottom: 15vh;
+}
+footer article p {
+  margin-bottom: 3vh;
+}
+footer article h4 {
+  line-height: 3.7rem;
+  margin-bottom: 4vh;
+}
+footer .footerFlex {
+  margin: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerFlex .socialMedia {
+  margin-bottom: 5vh;
+}
+footer .footerFlex .socialMedia img {
+  width: 1.5vw;
+  margin: 0 0.2vw;
+  margin-bottom: 1.5vh;
+}
+footer .footerFlex p {
+  margin-bottom: 1.5vh;
+}
+footer .logos {
+  margin-right: 5vw;
+}
+footer .logos img {
+  width: 4vw;
+  margin: 0 1vw;
+}
+footer h1 {
+  font-size: 8rem;
+  color: #000000;
+}
+footer h1 span {
+  color: rgb(244, 244, 244);
+  -webkit-text-stroke: 1px black;
+}
+footer .diagonaleAnimation {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Startposition: Mitte oben */
+  transform: translateX(-50%) rotate(45deg); /* Text um 45 Grad drehen und zurückschieben */
+  white-space: nowrap; /* Verhindert Zeilenumbrüche */
+  animation: diagonalMove 5s linear infinite; /* Animation mit Namen "diagonalMove" */
+}
+@keyframes diagonalMove {
+  0% {
+    top: 0;
+    left: 50%; /* Startposition: Mitte oben */
+  }
+  100% {
+    top: 100%; /* Endposition: Text unten */
+    left: 101%; /* Endposition: Text rechts */
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
